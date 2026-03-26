@@ -1,0 +1,33 @@
+import random
+
+# We use a while True loop to repeat the prompt until the condition is met
+while True:
+    user_input = input("Please enter a string of exactly 10 characters: ")
+    string_length = len(user_input)
+
+    if string_length < 10:
+        print(f"String not long enough ({string_length}/10). Try again!")
+    elif string_length > 10:
+        print(f"String too long ({string_length}/10). Try again!")
+    else:
+        print("Perfect string!")
+        # Since the length is correct, we break out of the while loop
+        break
+
+# 3. Print the First and Last Characters
+print(f"First character: {user_input[0]}")
+print(f"Last character: {user_input[-1]}")
+
+# 4. Build the String Character by Character
+print("\nConstructing the string:")
+incremental_string = ""
+for char in user_input:
+    incremental_string += char
+    print(incremental_string)
+
+# 5. Bonus: Jumble the String
+print("\n--- Bonus: Jumbled String ---")
+char_list = list(user_input)
+random.shuffle(char_list)
+jumbled_string = "".join(char_list)
+print(f"Jumbled version: {jumbled_string}")

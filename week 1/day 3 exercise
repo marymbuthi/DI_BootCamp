@@ -1,0 +1,74 @@
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+
+# zip pairs them up, dict() turns those pairs into a dictionary
+result = dict(zip(keys, values))
+print(result)
+family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
+total_cost = 0
+
+for name, age in family.items():
+    if age < 3:
+        price = 0
+    elif 3 <= age <= 12:
+        price = 10
+    else:
+        price = 15
+    
+    print(f"{name.capitalize()} pays ${price}")
+    total_cost += price
+
+print(f"Total family cost: ${total_cost}")
+brand = {
+    "name": "Zara",
+    "creation_date": 1975,
+    "creator_name": "Amancio Ortega Gaona",
+    "type_of_clothes": ["men", "women", "children", "home"],
+    "international_competitors": ["Gap", "H&M", "Benetton"],
+    "number_stores": 7000,
+    "major_color": {"France": "blue", "Spain": "red", "US": ["pink", "green"]}
+}
+
+# 1. Update stores
+brand["number_stores"] = 2
+
+# 2. Print a sentence
+clothes = ", ".join(brand["type_of_clothes"])
+print(f"Zara creates clothes for {clothes}.")
+
+# 3. Add country
+brand["country_creation"] = "Spain"
+
+# 4. Update competitors
+if "international_competitors" in brand:
+    brand["international_competitors"].append("Desigual")
+
+# 5. Delete creation date
+brand.pop("creation_date")
+
+# 6. Last competitor & US colors
+print(f"Last competitor: {brand['international_competitors'][-1]}")
+print(f"US major colors: {brand['major_color']['US']}")
+
+# 7. Keys info
+print(f"Number of keys: {len(brand)}")
+print(f"Keys list: {list(brand.keys())}")
+users = ["Mickey", "Minnie", "Donald", "Ariel", "Pluto"]
+
+# 1. Name to Index
+disney_dict1 = {}
+for index, name in enumerate(users):
+    disney_dict1[name] = index
+print(disney_dict1)
+
+# 2. Index to Name
+disney_dict2 = {}
+for index, name in enumerate(users):
+    disney_dict2[index] = name
+print(disney_dict2)
+
+# 3. Alphabetical Name to Index
+disney_dict3 = {}
+for index, name in enumerate(sorted(users)):
+    disney_dict3[name] = index
+print(disney_dict3)

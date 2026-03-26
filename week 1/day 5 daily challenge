@@ -1,0 +1,30 @@
+# Get input from user
+user_input = input("Enter words separated by commas: ")
+
+# Split the string into a list
+words = user_input.split(",")
+
+# Remove extra spaces (important!)
+words = [word.strip() for word in words]
+
+# Sort the list
+words.sort()
+
+# Join back into a string
+sorted_words = ",".join(words)
+
+# Print result
+print(sorted_words)
+def longest_word(sentence):
+    # Split sentence into words
+    words = sentence.split()
+
+    # Assume first word is longest
+    longest = words[0]
+
+    # Loop through words
+    for word in words:
+        if len(word) > len(longest):
+            longest = word
+
+    return longest

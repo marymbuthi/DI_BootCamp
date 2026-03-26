@@ -1,0 +1,51 @@
+# 1. User Input
+word = input("Enter a word: ")
+
+# 2. Creating the Dictionary
+letter_indices = {}
+
+for index, char in enumerate(word):
+    # Check if the character is already a key
+    if char in letter_indices:
+        letter_indices[char].append(index)
+    else:
+        # Create a new list for this new character
+        letter_indices[char] = [index]
+
+# 3. Output
+print(letter_indices)
+# 1. Provided Data
+items_purchase = {
+    "Apple": "$4", 
+    "Honey": "$3", 
+    "Fan": "$14", 
+    "Bananas": "$4", 
+    "Pan": "$100", 
+    "Spoon": "$2"
+}
+wallet_str = "$100"
+
+# 2. Data Cleaning: Convert wallet to an integer
+# We replace "$" with nothing and convert to int
+wallet_balance = int(wallet_str.replace("$", "").replace(",", ""))
+
+basket = []
+
+# 3. Determining Affordable Items
+# We loop through the items in the order they appear in the dictionary
+for item, price_str in items_purchase.items():
+    # Clean the item price string
+    clean_price = int(price_str.replace("$", "").replace(",", ""))
+    
+    # Can we afford it?
+    if clean_price <= wallet_balance:
+        basket.append(item)
+        wallet_balance -= clean_price # Update the wallet
+
+# 4. Final Output logic
+if not basket:
+    print("Nothing")
+else:
+    # Sort the basket alphabetically as requested
+    print(sorted(basket))
+    
