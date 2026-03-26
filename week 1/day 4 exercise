@@ -1,20 +1,20 @@
 import random
 
-# --- 🌟 Exercise 1: What Are You Learning? ---
+# ---  Exercise 1: What Are You Learning? ---
 def display_message():
     print("I am learning about functions in Python.")
 
 display_message()
 
 
-# --- 🌟 Exercise 2: Favorite Book ---
+# ---  Exercise 2: Favorite Book ---
 def favorite_book(title):
     print(f"One of my favorite books is {title}.")
 
 favorite_book("Alice in Wonderland")
 
 
-# --- 🌟 Exercise 3: Some Geography ---
+# ---  Exercise 3: Some Geography ---
 def describe_city(city, country="Unknown"):
     print(f"{city} is in {country}.")
 
@@ -33,7 +33,7 @@ def compare_random(user_num):
 compare_random(50)
 
 
-# --- 🌟 Exercise 5: Personalized Shirts ---
+# ---  Exercise 5: Personalized Shirts ---
 def make_shirt(size="large", text="I love Python"):
     print(f"The size of the shirt is {size} and the text is {text}.")
 
@@ -43,7 +43,7 @@ make_shirt("small", "Keep Coding") # Custom everything
 make_shirt(text="Keyword Argument", size="XL") # Using keyword arguments
 
 
-# --- 🌟 Exercise 6: Magicians ---
+# ---  Exercise 6: Magicians ---
 magician_names = ['Harry Houdini', 'David Blaine', 'Criss Angel']
 
 def show_magicians(magicians):
@@ -59,7 +59,7 @@ make_great(magician_names)
 show_magicians(magician_names)
 
 
-# --- 🌟 Exercise 7: Temperature Advice ---
+# ---  Exercise 7: Temperature Advice ---
 def get_random_temp(season):
     # Bonus: Temperature ranges based on season
     if season == "winter":
